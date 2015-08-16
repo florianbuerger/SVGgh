@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 * @see SVGDocumentView
 * @see SVGRenderer
 */
-@interface SVGRendererLayer : CALayer
+@interface SVGRendererLayer : CATiledLayer
 /*! @property renderer
 * @brief the object that does the actual drawing.
 */
