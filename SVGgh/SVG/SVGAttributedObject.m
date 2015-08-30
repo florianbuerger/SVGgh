@@ -594,7 +594,7 @@
 @synthesize	isClosed, strokeColor=_strokeColor,  quartzPath=_quartzPath;
 +(BOOL)enableSelectionWhenNotClosed
 {
-    return NO;
+    return YES;
 }
 
 -(CGPathRef) quartzPath

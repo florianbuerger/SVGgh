@@ -2,6 +2,10 @@
 -
 Author [Glenn R. Howes](mailto:glenn@genhelp.com), *owner [Generally Helpful Software](http://genhelp.com)*
 
+### Changes in this fork
+
+* GHShape and subclasses are not selectable per default when the path is not properly closed in the SVG. There are some SVG commands like `fill` that implicitly close the path. Added a hook to subclass `GHShape` and enable selection even when the path is not explicitly closed. Controlled via [+enableSelectionWhenNotClosed](https://github.com/keslcod/SVGgh/blob/5a5df4f40a970e1061d9749bfa9a27c1e410fc78/SVGgh/SVG/SVGAttributedObject.h#L142).
+
 ### Introduction
 In my own apps, I've often wished to avoid using bitmapped images for my interface elements. Often, I'll need to add PNG files for Retina, and non-retina, iPhone and iPad, and find myself confined to what I can do with an interface in terms of stretching elements. And all this artwork made my app bulky. So, I decided to implement an SVG renderer which could use standard **Scalable Vector Graphics** documents to draw button icons, background art or whatever my art needs were. I have Apps in the App Store like [SVG Paths](http://AppStore.com/SVGPaths) whose only PNG files are the required icons. 
 

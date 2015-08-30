@@ -107,6 +107,12 @@
 
 
 @implementation SVGRendererLayer
+
++ (CFTimeInterval)fadeDuration
+{
+    return 0;
+}
+
 -(instancetype)init
 {
     if(nil != (self = [super init]))
