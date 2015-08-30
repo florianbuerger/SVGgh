@@ -592,6 +592,11 @@
 
 @implementation GHShape
 @synthesize	isClosed, strokeColor=_strokeColor,  quartzPath=_quartzPath;
++(BOOL)enableSelectionWhenNotClosed
+{
+    return NO;
+}
+
 -(CGPathRef) quartzPath
 {
     if(_quartzPath == 0)
@@ -617,7 +622,7 @@
 {
     BOOL	result = NO;
     
-    if(self.isClosed)
+    if(self.isClosed || [GHShape enableSelectionWhenNotClosed])
     {
         CGPathRef	myPath  = self.quartzPath;
         

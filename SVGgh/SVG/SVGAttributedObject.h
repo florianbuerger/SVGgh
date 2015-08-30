@@ -137,6 +137,9 @@ NS_ASSUME_NONNULL_BEGIN
 * @see CGPathRef
 */
 @interface GHShape : GHRenderableObject
+/*! @brief Whether the shape need to be closed to be selectable or not. Default is `NO`.
+ */
++(BOOL)enableSelectionWhenNotClosed;
 @property (strong, nonatomic, readonly)  NSString* __nullable 		strokeColor;
 @property (nonatomic, readonly)         BOOL			isClosed;
 @property (nonatomic, readonly)          CGPathRef	__nullable	quartzPath;
