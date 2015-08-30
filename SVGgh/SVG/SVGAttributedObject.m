@@ -1435,6 +1435,7 @@
                         GHAttributedObject* aChild = [[theClass alloc] initWithDictionary:aDefinition];
                         if(aChild != nil)
                         {
+                            aChild.parent = self;
                             [mutableChildren addObject:aChild];
                         }
                     }
